@@ -1,6 +1,6 @@
 extends Control
 
-const SCORE_ITEM = preload("res://docsExamples/tutorials/GetStarted/AddLeaderboard/score_item.tscn")
+const SCORE_ITEM = preload("res://tutorials/GetStarted/AddLeaderboard/score_item.tscn")
 @onready var container: VBoxContainer = $M/Container
 @onready var player_name: LineEdit = %PlayerName
 @onready var score: LineEdit = %Score
