@@ -12,33 +12,33 @@ grow_vertical = 2
 script = ExtResource("1_ic3p2")
 
 [node name="M" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 367.0
+offset_bottom = 35.0
 theme_override_constants/margin_left = 100
 
-[node name="Container" type="VBoxContainer" parent="M"]
+[node name="V" type="VBoxContainer" parent="M"]
 layout_mode = 2
 
-[node name="ContainerForAdd" type="HBoxContainer" parent="M/Container"]
+[node name="Container" type="VBoxContainer" parent="M/V"]
 layout_mode = 2
 
-[node name="PlayerName" type="LineEdit" parent="M/Container/ContainerForAdd"]
+[node name="ContainerForAdd" type="HBoxContainer" parent="M/V"]
+layout_mode = 2
+
+[node name="PlayerName" type="LineEdit" parent="M/V/ContainerForAdd"]
 unique_name_in_owner = true
 layout_mode = 2
 placeholder_text = "Player name"
 expand_to_text_length = true
 
-[node name="Score" type="LineEdit" parent="M/Container/ContainerForAdd"]
+[node name="Score" type="LineEdit" parent="M/V/ContainerForAdd"]
 unique_name_in_owner = true
 layout_mode = 2
 placeholder_text = "Score"
 
-[node name="AddScore" type="Button" parent="M/Container/ContainerForAdd"]
+[node name="AddScore" type="Button" parent="M/V/ContainerForAdd"]
 layout_mode = 2
 text = "Add score"
 
-[connection signal="pressed" from="M/Container/ContainerForAdd/AddScore" to="." method="_on_add_score_pressed"]
+[connection signal="pressed" from="M/V/ContainerForAdd/AddScore" to="." method="_on_add_score_pressed"]
