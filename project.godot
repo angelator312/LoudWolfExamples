@@ -13,3 +13,11 @@ config_version=5
 config/name="LoudWolfExamples"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LoudWolf="*res://addons/loud_wolf/LoudWolf.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/loud_wolf/plugin.cfg")

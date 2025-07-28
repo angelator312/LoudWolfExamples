@@ -1,0 +1,4 @@
+[submodule "addons"]
+	path = addons
+	url = git@github.com:angelator312/LoudWolf.git
+	branch = only_addons_dir
