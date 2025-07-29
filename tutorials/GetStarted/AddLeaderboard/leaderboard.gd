@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 func make_scores():
-	await LoudWolf.Scores.get_scores(0)
+	await LoudWolf.Scores.get_all_scores()
 	var i:=0
 	for sc in LoudWolf.Scores.scores:
 		add_item(sc,i)
